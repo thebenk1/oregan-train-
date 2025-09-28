@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://df8bh561s1jpt"]
+
+[ext_resource type="Script" uid="uid://jq2k3p264k83" path="res://pause_menu.gd" id="1_hdmo1"]
+
+[node name="pause menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hdmo1")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 135.0
+offset_bottom = 91.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "resume"
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "restart"
+
+[node name="Button3" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "quit"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

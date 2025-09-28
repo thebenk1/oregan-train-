@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://u1br5w5jv26k"]
+
+[ext_resource type="PackedScene" uid="uid://ca2kldihey3ks" path="res://character_body_2d.tscn" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://cku3hrihyhkeo" path="res://inside.png" id="3_epypp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
+size = Vector2(183.59752, 1243.2466)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(-1, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(678.99994, -23.999998)
+rotation = 0.0021798518
+texture = ExtResource("3_epypp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-21.572632, 196.0475)
+rotation = 1.5825151
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_epypp")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-18.477304, -218.96024)
+rotation = 1.5719283
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(704.98303, -8.536779)
+shape = SubResource("RectangleShape2D_epypp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-709.0157, -6.4544706)
+shape = SubResource("RectangleShape2D_epypp")
